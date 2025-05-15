@@ -12,7 +12,7 @@ class SearchViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var hasNext: Bool = false
     @Published var hasPrev: Bool = false
-    @Published var searchText: String = "" {
+    @Published var searchText: String = "Rick" {
         didSet {
             errorMessage = nil
             pageCount = 1
@@ -20,6 +20,12 @@ class SearchViewModel: ObservableObject {
         }
     }
 
+    init() {
+        errorMessage = nil
+        pageCount = 1
+        debounceSearch()
+    }
+    
     private let apiURLString = "https://rickandmortyapi.com/api/character/"
 
     private var debounceTimer: Timer?
