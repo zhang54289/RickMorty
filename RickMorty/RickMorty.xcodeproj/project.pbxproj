@@ -29,9 +29,49 @@
 		F2C7C8BF2DA74DDB00B4DF66 /* RickMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F2BA31E42DDD738D00576325 /* Exceptions for "RickMorty" folder in "RickMortyTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CharacterDetailView.swift,
+				CharacterResponseModel.swift,
+				CharacterRowView.swift,
+				ContentView.swift,
+				RickAndMortySearch.swift,
+				SearchView.swift,
+				SearchViewModel.swift,
+				ShareSheet.swift,
+			);
+			target = F2C7C8B42DA74DDB00B4DF66 /* RickMortyTests */;
+		};
+		F2BA31E52DDD738D00576325 /* Exceptions for "RickMorty" folder in "RickMortyUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CharacterDetailView.swift,
+				CharacterResponseModel.swift,
+				CharacterRowView.swift,
+				ContentView.swift,
+				RickAndMortySearch.swift,
+				SearchView.swift,
+				SearchViewModel.swift,
+				ShareSheet.swift,
+			);
+			target = F2C7C8BE2DA74DDB00B4DF66 /* RickMortyUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		F2BA31DA2DDD6DA600576325 /* RickMortyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RickMortyTests;
+			sourceTree = "<group>";
+		};
 		F2C7C8AA2DA74DD900B4DF66 /* RickMorty */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F2BA31E42DDD738D00576325 /* Exceptions for "RickMorty" folder in "RickMortyTests" target */,
+				F2BA31E52DDD738D00576325 /* Exceptions for "RickMorty" folder in "RickMortyUITests" target */,
+			);
 			path = RickMorty;
 			sourceTree = "<group>";
 		};
@@ -71,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C7C8AA2DA74DD900B4DF66 /* RickMorty */,
+				F2BA31DA2DDD6DA600576325 /* RickMortyTests */,
 				F2C7C8C22DA74DDB00B4DF66 /* RickMortyUITests */,
 				F2C7C8A92DA74DD900B4DF66 /* Products */,
 			);
@@ -145,6 +186,7 @@
 				F2C7C8C12DA74DDB00B4DF66 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				F2BA31DA2DDD6DA600576325 /* RickMortyTests */,
 				F2C7C8C22DA74DDB00B4DF66 /* RickMortyUITests */,
 			);
 			name = RickMortyUITests;
@@ -169,6 +211,7 @@
 					};
 					F2C7C8B42DA74DDB00B4DF66 = {
 						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
 						TestTargetID = F2C7C8A72DA74DD900B4DF66;
 					};
 					F2C7C8BE2DA74DDB00B4DF66 = {
@@ -388,6 +431,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FRM6B47L36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FRM6B47L36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -441,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRM6B47L36;
@@ -450,6 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = huan.zhang.SwiftUI.Rick.Morty.RickMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickMorty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RickMorty";
@@ -460,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRM6B47L36;

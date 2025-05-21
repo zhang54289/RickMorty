@@ -19,7 +19,7 @@ struct Info: Codable {
     let prev: String?
 }
 
-struct Character: Codable, Identifiable {
+struct Character: Codable, Identifiable, Equatable {
     let id: Int
     let name: String
     let status: String
@@ -34,7 +34,7 @@ struct Character: Codable, Identifiable {
     let created: String
 }
 
-struct LocationInfo: Codable {
+struct LocationInfo: Codable, Equatable {
     let name: String
     let url: String
 }
