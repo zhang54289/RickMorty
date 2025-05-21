@@ -14,11 +14,14 @@ final class RickMortyUITests: XCTestCase {
 
         let searchField = app.textFields["Search name"]
         XCTAssertTrue(searchField.waitForExistence(timeout: 5))
-        searchField.tap()
-        searchField.typeText("Morty")
-
         let cell = app.cells.firstMatch
         XCTAssertTrue(cell.waitForExistence(timeout: 5))
+
+        searchField.doubleTap()
+        searchField.typeText("\u{8}")
+        searchField.typeText("Morty")
+        let cell2 = app.cells.firstMatch
+        XCTAssertTrue(cell2.waitForExistence(timeout: 5))
     }
     
     func testPaginationButtons() throws {
@@ -27,7 +30,8 @@ final class RickMortyUITests: XCTestCase {
 
         let searchField = app.textFields["Search name"]
         XCTAssertTrue(searchField.waitForExistence(timeout: 5))
-        searchField.tap()
+        searchField.doubleTap()
+        searchField.typeText("\u{8}")
         searchField.typeText("Rick")
 
         let nextButton = app.buttons["Next"]
