@@ -35,6 +35,21 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertNil(viewModel.errorMessage)
     }
 
+    func testErrorMessageRemainsNilAfter1Second() {
+        viewModel.errorMessage = "Old Error"
+        viewModel.searchText = "Morty"
+        
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        
+        // Delay execution by 1 second
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            XCTAssertNil(self.viewModel.errorMessage)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.5)
+    }
+    
     func testLoadNextPageIncrementsPage() {
         let oldCharacters = viewModel.characters
         viewModel.searchText = "Rick"
